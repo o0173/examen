@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
-
-    <?xml version="1.0" encoding="utf-8"?>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -15,26 +13,29 @@
         android:layout_gravity="top|center"
         tools:context=".MainActivity">
 
-        <TextView
+        <EditText
             android:id="@+id/textViewPib"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:ems="10"
+            android:lines="2"
+            android:inputType="textMultiLine"
             android:layout_margin="10dp"
             android:textSize="20sp"
             android:text="ПІБ:" />
-        <TextView
+        <EditText
             android:id="@+id/textViewIpn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
             android:layout_weight="1"
             android:layout_margin="10dp"
             android:textSize="20sp"
             android:text="IPN:11111111" />
 
     </LinearLayout>
-
-    <?xml version="1.0" encoding="utf-8"?>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,17 +43,21 @@
         android:layout_gravity="top|center"
         tools:context=".MainActivity">
 
-        <TextView
+        <EditText
             android:id="@+id/textViewAccountId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
             android:layout_weight="1"
             android:layout_margin="10dp"
             android:textSize="20sp"
             android:text="Номер рахунку:" />
-        <TextView
+        <EditText
             android:id="@+id/textViewopenDate"
             android:layout_width="wrap_content"
+            android:ems="10"
+            android:inputType="date"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_margin="10dp"
@@ -60,12 +65,14 @@
             android:text="Дата відкриття" />
 
     </LinearLayout>
-    <TextView
+    <EditText
         android:id="@+id/textViewopentelephoneNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_weight="1"
+        android:ems="10"
+        android:inputType="phone"
         android:layout_margin="10dp"
         android:textSize="20sp"
         android:text="Номер телефону" />
@@ -76,4 +83,6 @@
         android:layout_height="200dp"
         android:layout_gravity="center"
         app:srcCompat="@mipmap/ic_launcher" />
+
+
 </LinearLayout>
