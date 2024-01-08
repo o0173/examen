@@ -6,16 +6,14 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.net.Uri
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.provider.MediaStore
 import android.util.Log
+import android.view.View
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import com.app.examen.databinding.ActivityMainBinding
-import java.io.FileOutputStream
-import java.io.IOException
-import java.io.OutputStream
-import java.lang.Exception
-import java.util.Properties
 
 
 class MainActivity : AppCompatActivity() {
@@ -77,7 +75,31 @@ class MainActivity : AppCompatActivity() {
         editor.putString("Номер рахунку", binding.textViewAccountId.text.toString())
         editor.putString("Дата відкриття", binding.textViewopenDate.text.toString())
         editor.putString("Номер телефону", binding.textViewopentelephoneNumber.text.toString())
-
         editor.apply()
+        showToast()
+    }
+
+
+    fun showToast() {
+        // Set the toast and duration
+        val toastDurationInMilliSeconds = 10000
+      val mToastToShow = Toast.makeText(this, "Дані було збережено", Toast.LENGTH_LONG)
+
+        // Set the countdown to display the toast
+        val toastCountDown: CountDownTimer
+        toastCountDown =
+            object : CountDownTimer(toastDurationInMilliSeconds.toLong(), 1000 /*Tick duration*/) {
+                override fun onTick(millisUntilFinished: Long) {
+                    mToastToShow.show()
+                }
+
+                override fun onFinish() {
+                    mToastToShow.cancel()
+                }
+            }
+
+        // Show the toast and starts the countdown
+        mToastToShow.show()
+        toastCountDown.start()
     }
 }
