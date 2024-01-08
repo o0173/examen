@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">examen</string>
+    <string name="message">Mensaje</string>
+    <string name="phone_number">Número de teléfono</string>
+    <string name="open_date">Fecha de apertura</string>
+    <string name="number_account">Número de cuenta:</string>
+    <string name="ipn">IPN:</string>
+    <string name="namesurname">Nombre completo:</string>
+</resources>

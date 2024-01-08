@@ -22,7 +22,7 @@
             android:ems="10"
             android:inputType="textMultiLine"
             android:lines="2"
-            android:hint="ПІБ:"
+            android:hint="@string/namesurname"
             android:textSize="20sp" />
 
         <EditText
@@ -34,7 +34,7 @@
             android:layout_weight="1"
             android:layout_margin="10dp"
             android:textSize="20sp"
-            android:hint="IPN:11111111" />
+            android:hint="@string/ipn" />
 
     </LinearLayout>
     <LinearLayout
@@ -53,7 +53,7 @@
             android:layout_weight="1"
             android:layout_margin="10dp"
             android:textSize="20sp"
-            android:hint="Номер рахунку:" />
+            android:hint="@string/number_account" />
         <EditText
             android:id="@+id/textViewopenDate"
             android:layout_width="wrap_content"
@@ -63,7 +63,7 @@
             android:layout_weight="1"
             android:layout_margin="10dp"
             android:textSize="20sp"
-            android:hint="Дата відкриття" />
+            android:hint="@string/open_date" />
 
     </LinearLayout>
     <EditText
@@ -76,7 +76,7 @@
         android:inputType="phone"
         android:layout_margin="10dp"
         android:textSize="20sp"
-        android:hint="Номер телефону" />
+        android:hint="@string/phone_number" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -89,7 +89,7 @@
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Повідомлення" />
+        android:text="@string/message" />
 
 
 </LinearLayout>
