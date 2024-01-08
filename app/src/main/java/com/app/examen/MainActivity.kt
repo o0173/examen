@@ -40,8 +40,9 @@ class MainActivity : AppCompatActivity() {
         sharedPreferences = getPreferences(Context.MODE_PRIVATE)
         setContentView(binding.root)
         loadData()
-
-
+            binding.button.setOnClickListener {
+                Toast.makeText(applicationContext, "Повідомлення", Toast.LENGTH_SHORT).show()
+            }
         binding.imageView.setOnClickListener {
             val pickImg = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
             changeImage.launch(pickImg)
